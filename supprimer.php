@@ -1,5 +1,6 @@
+<?php require('inc_connexion.php');?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <?php

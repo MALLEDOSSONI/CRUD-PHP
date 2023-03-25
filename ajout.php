@@ -1,3 +1,4 @@
+<?php require('inc_connexion.php');?>
 <html lang="fr">
 
 <head>
@@ -16,7 +17,7 @@
         if ((empty($ville_nom)) or empty($ville_text)) {
             $message = '<p class="error">Vous devez saisir le non d\'une ville et sa presentation</p>';
         } else {
-            $result = $mysqli->query('SELECT count(ville_id) FROM _ville WHERE ville_nom="' . $ville_nom . '"');
+            $result = $mysqli->query('SELECT count(ville_id) FROM _ville WHERE ville_nom = "'. $ville_nom.'"');
             $row = $result->fetch_array();
             //$row[0] contient la valeur retourne par mysql
             if ($row[0] > 0) {
